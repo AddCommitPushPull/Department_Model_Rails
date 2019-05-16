@@ -1,2 +1,16 @@
 <h1>Departments#index</h1>
 <p>Find me in app/views/departments/index.html.erb</p>
+
+
+
+<% def new %>
+  <% @department = Department.new %>
+  <%=render partial: "form" %>
+<% end %>
+
+<% def edit %>
+  <%= render partial: "form" %>
+<% end %>
+
+#NOTE if the file was in a different folder we need to specify
+# render 'topics/form'
